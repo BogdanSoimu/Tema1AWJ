@@ -1,21 +1,593 @@
-<!DOCTYPE html>
-<html ng-app="blog">
-<head>
-  <title>My application</title>
-  <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
-  <link rel="stylesheet" media="all" href="css/custom.css">
-</head>
-<body>
-
-  <div class="container">
-    <div ng-controller="HomeController">
-      <h1>{{ helloWorld }}</h1>
-    </div>
-  </div>
-
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/app.js"></script>
-</body>
+ <!DOCTYPE html>
+ <html ng-app="blog">
+ <head>
+   <title>My application</title>
+   <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
+   <link rel="stylesheet" media="all" href="css/custom.css">
+ </head>
+ <body>
+   <div class="container">
+     <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="">AWJ Base Project</a>
+         </div>
+ 
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav">
+             <li><a href="#">Avion</a></li>
+             <li><a href="#">Masina</a></li>
+			 <li><a href="#">Persoana</a></li>
+			 <li><a href="#">Student</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+   </div>
+ 
+   <hr/>
+ 
+   <div class="container">
+     <div ng-controller="HomeController">
+      <!-- <h1> {{ helloWorld }}</h1>-->
+       <p>Writing this live into the browser...</p>
+     </div>
+   </div>
+ 
+   <hr/>
+ 
+   <!-- /resources1 -->
+   <div class="container">
+     <h1>Avion</h1>
+     <h2>Avioane</h2>
+     <table class="table table-bordered">
+       <tr>
+         <th>ID</th>
+		 <th>Name</th>
+         
+         <th style="width:210px;">Options</th>
+       </tr>
+       <tr>
+        <td>1</td>
+		<td>Boeing 777</td>
+         
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>2</td>
+		 <td>AirBus</td>
+         
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>3</td>
+		 <td>Fokker</td>
+         
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+     </table>
+ 
+     <div class="row">
+       <div class="col-md-3">
+         <h2>Edit avion</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">Name</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">ID</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-info">Save</button>
+         </form>
+       </div>
+ 
+ 
+       <div class="col-md-3 col-md-offset-6">
+         <h2>Add avion</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">Name</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">ID</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-success">Add</button>
+         </form>
+       </div>
+     </div>
+ 
+     <div class="row">
+       <div class="col-md-12">
+         <h2>Show avion</h2>
+       </div>
+       <div class="col-md-2">
+         <img src="http://lorempixel.com/200/200/technics/?id=1" class="img-thumbnail"/>
+       </div>
+       <div class="col-md-10">
+         <h1>1</h1>
+         <p>Boeing 777</p>
+         </table>
+       </div>
+     </div>
+   </div>
+ 
+   <hr/>
+ 
+   <!-- /resources2-->
+   <div class="container">
+     <h1>Masina</h1>
+     <h2>Masini</h2>
+     <table class="table table-bordered">
+       <tr>
+         <th>ID</th>
+         <th>Name</th>
+         <th style="width:210px;">Options</th>
+       </tr>
+       <tr>
+         <td>1</td>
+         <td>BMW</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>2</td>
+         <td>Dacia</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>3</td>
+         <td>Porsche</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+     </table>
+ 
+     <div class="row">
+       <div class="col-md-3">
+         <h2>Edit masina</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-info">Save</button>
+         </form>
+       </div>
+ 
+ 
+       <div class="col-md-3 col-md-offset-6">
+         <h2>Add masina</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-success">Add</button>
+         </form>
+       </div>
+     </div>
+ 
+     <div class="row">
+       <div class="col-md-12">
+         <h2>Show masina</h2>
+       </div>
+       <div class="col-md-2">
+         <img src="http://lorempixel.com/200/200/technics/?id=2" class="img-thumbnail"/>
+       </div>
+       <div class="col-md-10">
+         <h1>1</h1>
+         <p>Dacia</p>
+         </table>
+       </div>
+     </div>
+   </div>
+ 
+    <!-- /resources3-->
+   <div class="container">
+     <h1>Persoana</h1>
+     <h2>Persoane</h2>
+     <table class="table table-bordered">
+       <tr>
+         <th>ID</th>
+         <th>Name</th>
+         <th style="width:210px;">Options</th>
+       </tr>
+       <tr>
+         <td>1</td>
+         <td>John</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>2</td>
+         <td>Paul</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>3</td>
+         <td>Bob</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+     </table>
+ 
+     <div class="row">
+       <div class="col-md-3">
+         <h2>Edit persoana</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-info">Save</button>
+         </form>
+       </div>
+ 
+ 
+       <div class="col-md-3 col-md-offset-6">
+         <h2>Add persoana</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-success">Add</button>
+         </form>
+       </div>
+     </div>
+ 
+     <div class="row">
+       <div class="col-md-12">
+         <h2>Show persoana</h2>
+       </div>
+       <div class="col-md-2">
+         <img src="http://lorempixel.com/200/200/technics/?id=2" class="img-thumbnail"/>
+       </div>
+       <div class="col-md-10">
+         <h1>1</h1>
+         <p>Bob</p>
+         </table>
+       </div>
+     </div>
+   </div>
+   
+      <!-- /resources4-->
+   <div class="container">
+     <h1>Student</h1>
+     <h2>Studenti</h2>
+     <table class="table table-bordered">
+       <tr>
+         <th>ID</th>
+         <th>Name</th>
+         <th style="width:210px;">Options</th>
+       </tr>
+       <tr>
+         <td>1</td>
+         <td>Andrei</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>2</td>
+         <td>Bogdan</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+       <tr>
+         <td>3</td>
+         <td>Dan</td>
+         <td>
+           <a href="">
+             <span class="label label-success">
+               Open
+               <span class="glyphicon glyphicon-folder-open"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-primary">
+               Edit
+               <span class="glyphicon glyphicon-edit"></span>
+             </span>
+           </a>
+           <a href="">
+             <span class="label label-danger">
+               Remove
+               <span class="glyphicon glyphicon-remove"></span>
+             </span>
+           </a>
+         </td>
+       </tr>
+     </table>
+ 
+     <div class="row">
+       <div class="col-md-3">
+         <h2>Edit student</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-info">Save</button>
+         </form>
+       </div>
+ 
+ 
+       <div class="col-md-3 col-md-offset-6">
+         <h2>Add student</h2>
+         <form action="" method="">
+           <div class="form-group">
+             <label for="attribute1">ID</label>
+             <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+           </div>
+           <div class="form-group">
+             <label for="attribute2">Name</label>
+             <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+           </div>
+           <button type="submit" class="btn btn-success">Add</button>
+         </form>
+       </div>
+     </div>
+ 
+     <div class="row">
+       <div class="col-md-12">
+         <h2>Show student</h2>
+       </div>
+       <div class="col-md-2">
+         <img src="http://lorempixel.com/200/200/technics/?id=2" class="img-thumbnail"/>
+       </div>
+       <div class="col-md-10">
+         <h1>1</h1>
+         <p>Bogdan</p>
+         </table>
+       </div>
+     </div>
+   </div>
+ 
+   <hr/>
+ 
+   <div class="container">
+     <footer class="footer">
+       <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+       <p class="text-muted pull-right">Soimu Bogdan, 332AA</p>
+     </footer>
+   </div>
+ 
+   <script src="js/jquery-1.11.3.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/angular.min.js"></script>
+   
+ </body>
 </html>

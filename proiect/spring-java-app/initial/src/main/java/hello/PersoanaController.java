@@ -20,7 +20,7 @@ public class PersoanaController {
   PersoanaController() {
     Persoana p1 = new Persoana(1, "John");
     Persoana p2 = new Persoana(2, "Paul");
-    Persoana p3 = new Persoana(3, "Paul");
+    Persoana p3 = new Persoana(3, "Bob");
 
     persoane.add(p1);
     persoane.add(p2);

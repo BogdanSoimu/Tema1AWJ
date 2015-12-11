@@ -20,7 +20,7 @@ public class MasinaController {
   MasinaController() {
     Masina p1 = new Masina(1, "BMW");
     Masina p2 = new Masina(2, "Dacia");
-    Masina p3 = new Masina(3, "Porche");
+    Masina p3 = new Masina(3, "Porsche");
 
     masini.add(p1);
     masini.add(p2);
